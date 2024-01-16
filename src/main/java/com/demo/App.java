@@ -1,14 +1,14 @@
 package com.demo;
 
 
-public class App 
+import com.demo.jpa.Person;
+import com.demo.jpa.PersonDAO;
+
+public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-    }
-
-    public static String sayHello(){
-        return "Hello";
+        Person jcd = new Person("Jean-Christophe", "Dominguez");
+        PersonDAO.save(jcd);
     }
 }
